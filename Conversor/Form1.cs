@@ -12,23 +12,54 @@ namespace Conversor
             textBox1.Text += ((Button)sender).Text;
         }
 
-        private void euroPeseta(object sender, EventArgs e)
+        private double insertaMonedes(String moneda)
         {
-            var dinero = Convert.ToDouble(textBox1.Text);
-            dinero *= 166.386;
-            textBox1.Text = dinero.ToString();
-        }
-
-        private void pesetaEuro(object sender, EventArgs e)
-        {
-            var dinero = Convert.ToDouble(textBox1.Text);
-            dinero *= 0.006;
-            textBox1.Text = dinero.ToString();
+            if(moneda == "Euro")
+            {
+                return 1;
+            }
+            else if (moneda == "Peseta")
+            {
+                return 166.38;
+            }
+            else if (moneda == "Dolar")
+            {
+                return 1.09;
+            }
+            else if (moneda == "Leu")
+            {
+                return 19.78;
+            }
+            else if (moneda == "Yen")
+            {
+                return 162.1;
+            }
+            else if (moneda == "Rupia")
+            {
+                return 94.58;
+            }
+            return 0;
         }
 
         private void borrar(object sender, EventArgs e)
         {
             textBox1.Text = null;
+        }
+
+        private void conversor(object sender, EventArgs e)
+        {
+            var moneda1 = insertaMonedes(comboBox1.Text);
+            var moneda2 = insertaMonedes(comboBox2.Text);
+            var diners = Convert.ToDouble(textBox1.Text);
+            diners /= moneda1;
+            diners *= moneda2;
+            textBox1.Text = diners.ToString();
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

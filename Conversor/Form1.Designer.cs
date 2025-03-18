@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            button1 = new Button();
             textBox1 = new TextBox();
             button2 = new Button();
             button3 = new Button();
@@ -41,8 +40,11 @@
             button9 = new Button();
             button10 = new Button();
             button11 = new Button();
-            button12 = new Button();
             Borrar = new Button();
+            button1 = new Button();
+            comboBox1 = new ComboBox();
+            comboBox2 = new ComboBox();
+            label2 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -54,20 +56,11 @@
             label1.TabIndex = 0;
             label1.Text = "Conversor";
             // 
-            // button1
-            // 
-            button1.Location = new Point(334, 209);
-            button1.Name = "button1";
-            button1.Size = new Size(170, 60);
-            button1.TabIndex = 1;
-            button1.Text = "Euro --> Peseta";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += euroPeseta;
-            // 
             // textBox1
             // 
             textBox1.Location = new Point(51, 71);
             textBox1.Name = "textBox1";
+            textBox1.ReadOnly = true;
             textBox1.Size = new Size(218, 23);
             textBox1.TabIndex = 2;
             // 
@@ -171,19 +164,9 @@
             button11.UseVisualStyleBackColor = true;
             button11.Click += posarNumero;
             // 
-            // button12
-            // 
-            button12.Location = new Point(334, 299);
-            button12.Name = "button12";
-            button12.Size = new Size(170, 60);
-            button12.TabIndex = 13;
-            button12.Text = "Peseta --> Euro";
-            button12.UseVisualStyleBackColor = true;
-            button12.Click += pesetaEuro;
-            // 
             // Borrar
             // 
-            Borrar.Location = new Point(334, 378);
+            Borrar.Location = new Point(369, 378);
             Borrar.Name = "Borrar";
             Borrar.Size = new Size(170, 60);
             Borrar.TabIndex = 14;
@@ -191,13 +174,54 @@
             Borrar.UseVisualStyleBackColor = true;
             Borrar.Click += borrar;
             // 
+            // button1
+            // 
+            button1.Location = new Point(369, 310);
+            button1.Name = "button1";
+            button1.Size = new Size(170, 49);
+            button1.TabIndex = 15;
+            button1.Text = "Convertir";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += conversor;
+            // 
+            // comboBox1
+            // 
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox1.Items.AddRange(new object[] { "Euro", "Peseta", "Dolar", "Leu", "Yen", "Rupia" });
+            comboBox1.Location = new Point(479, 268);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(121, 23);
+            comboBox1.TabIndex = 16;
+            // 
+            // comboBox2
+            // 
+            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox2.Items.AddRange(new object[] { "Euro", "Peseta", "Dolar", "Leu", "Yen", "Rupia" });
+            comboBox2.Location = new Point(299, 268);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(121, 23);
+            comboBox2.TabIndex = 17;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(435, 271);
+            label2.Name = "label2";
+            label2.Size = new Size(25, 15);
+            label2.TabIndex = 18;
+            label2.Text = "-->";
+            label2.Click += label2_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(541, 469);
+            ClientSize = new Size(646, 517);
+            Controls.Add(label2);
+            Controls.Add(comboBox2);
+            Controls.Add(comboBox1);
+            Controls.Add(button1);
             Controls.Add(Borrar);
-            Controls.Add(button12);
             Controls.Add(button11);
             Controls.Add(button10);
             Controls.Add(button9);
@@ -209,7 +233,6 @@
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(textBox1);
-            Controls.Add(button1);
             Controls.Add(label1);
             Name = "Form1";
             Text = "Form1";
@@ -221,7 +244,6 @@
         #endregion
 
         private Label label1;
-        private Button button1;
         private TextBox textBox1;
         private Button button2;
         private Button button3;
@@ -233,7 +255,10 @@
         private Button button9;
         private Button button10;
         private Button button11;
-        private Button button12;
         private Button Borrar;
+        private Button button1;
+        private ComboBox comboBox1;
+        private ComboBox comboBox2;
+        private Label label2;
     }
 }
