@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conversor", "Conversor\Conversor.csproj", "{C6712A50-63CD-497B-BC72-314A33A9768E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Conversor", "Conversor\Conversor.csproj", "{C6712A50-63CD-497B-BC72-314A33A9768E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +20,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
+		RESX_NeutralResourcesLanguage = ca-ES
 		SolutionGuid = {6E9E87F8-360C-4B2B-BE9A-4822FFD6F447}
 	EndGlobalSection
 EndGlobal
