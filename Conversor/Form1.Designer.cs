@@ -34,7 +34,6 @@ namespace Conversor
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             Tabcontrol = new TabControl();
             Conversor = new TabPage();
-            button12 = new Button();
             label4 = new Label();
             comboBox3 = new ComboBox();
             label2 = new Label();
@@ -81,7 +80,7 @@ namespace Conversor
             dataGridView1 = new DataGridView();
             helpProvider1 = new HelpProvider();
             toolTip1 = new ToolTip(components);
-            button13 = new Button();
+            helpProvider2 = new HelpProvider();
             Tabcontrol.SuspendLayout();
             Conversor.SuspendLayout();
             Gestio.SuspendLayout();
@@ -99,8 +98,6 @@ namespace Conversor
             // 
             // Conversor
             // 
-            Conversor.Controls.Add(button13);
-            Conversor.Controls.Add(button12);
             Conversor.Controls.Add(label4);
             Conversor.Controls.Add(comboBox3);
             Conversor.Controls.Add(label2);
@@ -123,15 +120,6 @@ namespace Conversor
             resources.ApplyResources(Conversor, "Conversor");
             Conversor.Name = "Conversor";
             Conversor.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            resources.ApplyResources(button12, "button12");
-            button12.Name = "button12";
-            helpProvider1.SetShowHelp(button12, (bool)resources.GetObject("button12.ShowHelp"));
-            toolTip1.SetToolTip(button12, resources.GetString("button12.ToolTip"));
-            button12.UseVisualStyleBackColor = true;
-            button12.Click += button12_Click;
             // 
             // label4
             // 
@@ -428,13 +416,6 @@ namespace Conversor
             // 
             resources.ApplyResources(helpProvider1, "helpProvider1");
             // 
-            // button13
-            // 
-            resources.ApplyResources(button13, "button13");
-            button13.Name = "button13";
-            button13.UseVisualStyleBackColor = true;
-            button13.Click += button13_Click;
-            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
@@ -503,8 +484,7 @@ namespace Conversor
         private Label label4;
         private ComboBox comboBox3;
         private HelpProvider helpProvider1;
-        private Button button12;
         private ToolTip toolTip1;
-        private Button button13;
+        private HelpProvider helpProvider2;
     }
 }
