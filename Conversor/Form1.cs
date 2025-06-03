@@ -213,5 +213,14 @@ namespace Conversor
             InitializeComponent();
         }
 
+        private void button12_Click_1(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "C:\\Program Files\\Microsoft Visual Studio\\ajuda.html");
+        }
+
+        private void button13_Click_1(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "C:\\Program Files\\Microsoft Visual Studio\\preguntes.html");
+        }
     }
 }

@@ -34,6 +34,8 @@ namespace Conversor
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             Tabcontrol = new TabControl();
             Conversor = new TabPage();
+            button13 = new Button();
+            button12 = new Button();
             label4 = new Label();
             comboBox3 = new ComboBox();
             label2 = new Label();
@@ -98,6 +100,8 @@ namespace Conversor
             // 
             // Conversor
             // 
+            Conversor.Controls.Add(button13);
+            Conversor.Controls.Add(button12);
             Conversor.Controls.Add(label4);
             Conversor.Controls.Add(comboBox3);
             Conversor.Controls.Add(label2);
@@ -120,6 +124,22 @@ namespace Conversor
             resources.ApplyResources(Conversor, "Conversor");
             Conversor.Name = "Conversor";
             Conversor.UseVisualStyleBackColor = true;
+            // 
+            // button13
+            // 
+            resources.ApplyResources(button13, "button13");
+            button13.Name = "button13";
+            helpProvider1.SetShowHelp(button13, (bool)resources.GetObject("button13.ShowHelp"));
+            button13.UseVisualStyleBackColor = true;
+            button13.Click += button13_Click_1;
+            // 
+            // button12
+            // 
+            resources.ApplyResources(button12, "button12");
+            button12.Name = "button12";
+            helpProvider1.SetShowHelp(button12, (bool)resources.GetObject("button12.ShowHelp"));
+            button12.UseVisualStyleBackColor = true;
+            button12.Click += button12_Click_1;
             // 
             // label4
             // 
@@ -486,5 +506,7 @@ namespace Conversor
         private HelpProvider helpProvider1;
         private ToolTip toolTip1;
         private HelpProvider helpProvider2;
+        private Button button13;
+        private Button button12;
     }
 }
